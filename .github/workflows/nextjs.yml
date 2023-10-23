@@ -52,8 +52,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16"
-          cache: pnpm
+          cache: "pnpm"
           cache-dependency-path: subdir/pnpm-lock.yaml
+      - run: pnpm install
       - name: Setup Pages
         uses: actions/configure-pages@v3
         with:
